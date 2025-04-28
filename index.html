@@ -1,714 +1,739 @@
-    <!DOCTYPE html>
-    <html lang="pt-br">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Pizzaria</title>
-        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
-        
-    </head>
-    <body>
-        <header>
-            <section>
-                <div>
-                    <p>Botão De Mais e Menos | Modo Escuro </p>
-                </div>
-            </section>
+            <!DOCTYPE html>
+            <html lang="pt-br">
+            <head>
+                <meta charset="UTF-8">
+                <meta name="viewport" content="width=device-width, initial-scale=1.0">
+                <title>Pizzaria</title>
+                <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+                <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+                <link rel="preconnect" href="https://fonts.googleapis.com">
+                <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+                <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@300..700&display=swap" rel="stylesheet">
+                <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Poppins:wght@400;700&display=swap" rel="stylesheet">   
+                <link rel="stylesheet" href="css/style.css">
 
-            <img src="img/Os de VDD.jpg" alt="pizzaria">
-            <h2>Pizzaria HervaMucha</h2>
-            <h3>Rua do Bostil, 666,Casa do Caralho, Itanhaém, SP</h3>
-            <p>ZAP | MESSENGER | IFOOD <button>Ver Mais</button> <!-- Esse Button vai ser um Modal do Horário de Funcionamento --> </p>
-            <hr>
-        </header>
-        <main>
-            <div class="tab_bar_nav">
-                <ul class="nav nav-tabs" id="myTab" role="tablist">
-                    <li class="nav-item primeiro">
-                    <a class="nav-link active" id="pizzas-tab" data-toggle="tab" href="#pizzas" role="tab" aria-controls="pizzas" aria-selected="true">Pizzas</a>
-                    </li>
-                    <li class="nav-item">
-                    <a class="nav-link" id="pizzasDoces-tab" data-toggle="tab" href="#pizzasDoces" role="tab" aria-controls="pizzasDoces" aria-selected="false">Pizzas Doces</a>
-                    </li>
-                    <li class="nav-item">
-                    <a class="nav-link" id="refrigerantes-tab" data-toggle="tab" href="#refrigerantes" role="tab" aria-controls="refrigerantes" aria-selected="false">Refrigerantes</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" id="sucos-tab" data-toggle="tab" href="#sucos" role="tab" aria-controls="sucos" aria-selected="false">Sucos</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" id="cervejas-tab" data-toggle="tab" href="#cervejas" role="tab" aria-controls="cervejas" aria-selected="false">Cervejas</a>
-                    </li>
-                </ul>
-                <div class="tab-content conteudo_navbar" id="myTabContent">
-                    <div class="tab-pane fade show active conteudo" id="pizzas" role="tabpanel" aria-labelledby="pizzas-tab">
-                        <h1>Pizzas</h1>
-                        <div class="container mt-4">
-                            <div class="row">
-                                <div class="col-md-6 mb-4">
-                                    <div class="card">
-                                        <div class="card-body">
-                                            <h5 class="card-title">Pizza 2 Queijos</h5>
-                                            <p class="card-text">Mussarela, catupiry e tomate</p>
-                                            <p class="card-text"><strong>R$ 46,00 a R$ 58,00</strong></p>
+            </head>
+            <body>
+                <header>
+                    <section class="barraSup">
+                        <div class="conteudoBarraSup">
+                            <span class="telefone">Delivery: (13) 98838-6852</span>
+                            <div class="icons">
+                            <i class="fa-brands fa-whatsapp fa-lg"></i>
+                            <i class="fa-brands fa-facebook fa-lg"></i>
+                            <i class="fa-brands fa-instagram fa-lg"></i> |
+                            <i class="fa-solid fa-plus fa-lg"></i>
+                            <i class="fa-solid fa-minus fa-lg"></i> 
+                            <i class="fa-solid fa-moon fa-lg"></i>
+                            <i class="fa-solid fa-sun fa-lg"></i>
+                            </div>
+                        </div>
+                    </section>
+                    
+                    <section class="barraInf">
+                    <div class="fundoBlur"></div>
+                    <div class="conteudoBarraInf">
+                    <img class="logoPizzaria" src="img/Os de VDD.jpg" alt="pizzaria">
+                    <div class="textoBarraInf">
+                    <h2 class="titulo">Pizzaria HervaMucha</h2>
+                    <span class="endereco">
+                        <i class="fa-solid fa-location-dot"></i>
+                        <h3>Av Marcelinho Carió, 157, Itanhaém, SP</h3>
+                    </span>
+
+                    <div class="horario">
+                        <i class="fa-solid fa-clock"></i> 60-90min  | <button class="modal_funcionamento">Ver Mais</button> <!-- Esse Button vai ser um Modal do Horário de Funcionamento -->
+                    </div>
+                    </div>
+                    </div>
+                </section>
+                </header>
+                <main>
+                    <div class="tab_bar_nav">
+                        <ul class="nav nav-tabs" id="myTab" role="tablist">
+                            <li class="nav-item primeiro">
+                            <a class="nav-link active" id="pizzas-tab" data-toggle="tab" href="#pizzas" role="tab" aria-controls="pizzas" aria-selected="true">Pizzas</a>
+                            </li>
+                            <li class="nav-item">
+                            <a class="nav-link" id="pizzasDoces-tab" data-toggle="tab" href="#pizzasDoces" role="tab" aria-controls="pizzasDoces" aria-selected="false">Pizzas Doces</a>
+                            </li>
+                            <li class="nav-item">
+                            <a class="nav-link" id="refrigerantes-tab" data-toggle="tab" href="#refrigerantes" role="tab" aria-controls="refrigerantes" aria-selected="false">Refrigerantes</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" id="sucos-tab" data-toggle="tab" href="#sucos" role="tab" aria-controls="sucos" aria-selected="false">Sucos</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" id="cervejas-tab" data-toggle="tab" href="#cervejas" role="tab" aria-controls="cervejas" aria-selected="false">Cervejas</a>
+                            </li>
+                        </ul>
+                        <div class="tab-content conteudo_navbar" id="myTabContent">
+                            <div class="tab-pane fade show active conteudo" id="pizzas" role="tabpanel" aria-labelledby="pizzas-tab">
+                                <h1 class="titulo">Pizzas</h1>
+                                <div class="container mt-4">
+                                    <div class="row">
+                                        <div class="col-md-6 mb-4">
+                                            <div class="card">
+                                                <div class="card-body">
+                                                    <h5 class="card-title">Pizza 2 Queijos</h5>
+                                                    <p class="card-text">Mussarela, catupiry e tomate</p>
+                                                    <p class="card-text"><strong>R$ 46,00 a R$ 58,00</strong></p>
+                                                </div>
+                                            </div>
                                         </div>
+                                        
+                                        <div class="col-md-6 mb-4">
+                                            <div class="card">
+                                                <div class="card-body">
+                                                    <h5 class="card-title">Pizza 3 Queijos</h5>
+                                                    <p class="card-text">Mussarela, catupiry e provolone</p>
+                                                    <p class="card-text"><strong>R$ 50,00 a R$ 62,00</strong></p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        
+                                        <div class="col-md-6 mb-4">
+                                            <div class="card">
+                                                <div class="card-body">
+                                                    <h5 class="card-title">Pizza 4 Queijos</h5>
+                                                    <p class="card-text">Mussarela, catupiry, provolone e gorgonzola</p>
+                                                    <p class="card-text"><strong>R$ 61,00 a R$ 70,00</strong></p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        
+                                        <div class="col-md-6 mb-4">
+                                            <div class="card">
+                                                <div class="card-body">
+                                                    <h5 class="card-title">Pizza A Moda do Chefe</h5>
+                                                    <p class="card-text">lombo, escarola, mussarela e bacon</p>
+                                                    <p class="card-text"><strong>R$ 50,00 a R$ 62,00</strong></p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        
+                                        <div class="col-md-6 mb-4">
+                                            <div class="card">
+                                                <div class="card-body">
+                                                    <h5 class="card-title">Pizza Atum</h5>
+                                                    <p class="card-text">Atum ralado e cebola</p>
+                                                    <p class="card-text"><strong>R$ 54,00 a R$ 62,00</strong></p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        
+                                        <div class="col-md-6 mb-4">
+                                            <div class="card">
+                                                <div class="card-body">
+                                                    <h5 class="card-title">Pizza Atum com Catupiry</h5>
+                                                    <p class="card-text">Atum ralado, cebola e Catupiry</p>
+                                                    <p class="card-text"><strong>R$ 46,00 a R$ 58,00</strong></p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        
+                                        <div class="col-md-6 mb-4">
+                                            <div class="card">
+                                                <div class="card-body">
+                                                    <h5 class="card-title">Pizza Bacon</h5>
+                                                    <p class="card-text">Mussarela, ovo e Bacon</p>
+                                                    <p class="card-text"><strong>R$ 50,00 a R$ 62,00</strong></p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        
+                                        <div class="col-md-6 mb-4">
+                                            <div class="card">
+                                                <div class="card-body">
+                                                    <h5 class="card-title">Pizza Baiana</h5>
+                                                    <p class="card-text">Calabresa moida,molho de pimenta e cebola</p>
+                                                    <p class="card-text"><strong>R$ 40,00 a R$ 52,00</strong></p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        
+                                        <div class="col-md-6 mb-4">
+                                            <div class="card">
+                                                <div class="card-body">
+                                                    <h5 class="card-title">Pizza Bauru</h5>
+                                                    <p class="card-text">Presunto, mussarela e tomate</p>
+                                                    <p class="card-text"><strong>R$ 48,00 a R$ 60,00</strong></p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        
+                                        <div class="col-md-6 mb-4">
+                                            <div class="card">
+                                                <div class="card-body">
+                                                    <h5 class="card-title">Pizza Brócolis</h5>
+                                                    <p class="card-text">Brócolis, mussarela e alho frito</p>
+                                                    <p class="card-text"><strong>R$ 48,00 a R$ 60,00</strong></p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        
+                                        <div class="col-md-6 mb-4">
+                                            <div class="card">
+                                                <div class="card-body">
+                                                    <h5 class="card-title">Pizza Calabresa</h5>
+                                                    <p class="card-text">Calabresa e cebola</p>
+                                                    <p class="card-text"><strong>R$ 36,00 a R$ 48,00</strong></p>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-md-6 mb-4">
+                                            <div class="card">
+                                                <div class="card-body">
+                                                    <h5 class="card-title">Pizza Calabresa com mussarela</h5>
+                                                    <p class="card-text">Calabresa moida, mussarela e cebola</p>
+                                                    <p class="card-text"><strong>R$ 48,00 a R$ 60,00</strong></p>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-md-6 mb-4">
+                                            <div class="card">
+                                                <div class="card-body">
+                                                    <h5 class="card-title">Pizza Calacatu</h5>
+                                                    <p class="card-text">Calabresa fatiada, catupiry e cebola</p>
+                                                    <p class="card-text"><strong>R$ 48,00 a R$ 60,00</strong></p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        
+                                        <div class="col-md-6 mb-4">
+                                            <div class="card">
+                                                <div class="card-body">
+                                                    <h5 class="card-title">Pizza Catupira</h5>
+                                                    <p class="card-text">Catupiry e milho</p>
+                                                    <p class="card-text"><strong>R$ 41,00 a R$ 53,00</strong></p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        
+                                        <div class="col-md-6 mb-4">
+                                            <div class="card">
+                                                <div class="card-body">
+                                                    <h5 class="card-title">Pizza Catupiry</h5>
+                                                    <p class="card-text">Catupiry e tomate</p>
+                                                    <p class="card-text"><strong>R$ 38,00 a R$ 50,00</strong></p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        
+                                        <div class="col-md-6 mb-4">
+                                            <div class="card">
+                                                <div class="card-body">
+                                                    <h5 class="card-title">Pizza Escarola</h5>
+                                                    <p class="card-text">Escarola refogada e mussarela</p>
+                                                    <p class="card-text"><strong>R$ 43,00 a R$ 55,00</strong></p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        
+                                        <div class="col-md-6 mb-4">
+                                            <div class="card">
+                                                <div class="card-body">
+                                                    <h5 class="card-title">Pizza Frango com catupiry</h5>
+                                                    <p class="card-text">Frango, catupiry e cebola</p>
+                                                    <p class="card-text"><strong>R$ 50,00 a R$ 62,00</strong></p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        
+                                        <div class="col-md-6 mb-4">
+                                            <div class="card">
+                                                <div class="card-body">
+                                                    <h5 class="card-title">Pizza Frango com catupiry e milho</h5>
+                                                    <p class="card-text">Frango desfiado, catupiry e milho</p>
+                                                    <p class="card-text"><strong>R$ 53,00 a R$ 65,00</strong></p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                                                        
+                                        <div class="col-md-6 mb-4">
+                                            <div class="card">
+                                                <div class="card-body">
+                                                    <h5 class="card-title">Pizza Frango caipira</h5>
+                                                    <p class="card-text">Frango, mussarela e milho</p>
+                                                    <p class="card-text"><strong>R$ 59,00 a R$ 65,00</strong></p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                                                        
+                                        <div class="col-md-6 mb-4">
+                                            <div class="card">
+                                                <div class="card-body">
+                                                    <h5 class="card-title">Pizza GORGONZOLA</h5>
+                                                    <p class="card-text">GORGONZOLA</p>
+                                                    <p class="card-text"><strong>R$ 78,00 a R$ 90,00</strong></p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                                                        
+                                        <div class="col-md-6 mb-4">
+                                            <div class="card">
+                                                <div class="card-body">
+                                                    <h5 class="card-title">Pizza Itanhaém</h5>
+                                                    <p class="card-text">Mussarela, alho frito e manjericão</p>
+                                                    <p class="card-text"><strong>R$ 43,00 a R$ 55,00</strong></p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                                                        
+                                        <div class="col-md-6 mb-4">
+                                            <div class="card">
+                                                <div class="card-body">
+                                                    <h5 class="card-title">Pizza Lombo</h5>
+                                                    <p class="card-text">Lombo fatiado e cebola</p>
+                                                    <p class="card-text"><strong>R$ 49,00 a R$ 61,00</strong></p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                                                        
+                                        <div class="col-md-6 mb-4">
+                                            <div class="card">
+                                                <div class="card-body">
+                                                    <h5 class="card-title">Pizza Lombo com catupiry</h5>
+                                                    <p class="card-text">Lombo, catupiry e cebola</p>
+                                                    <p class="card-text"><strong>R$ 56,00 a R$ 68,00</strong></p>
+                                                </div>
+                                            </div>
+                                        </div>         
+
+                                        <div class="col-md-6 mb-4">
+                                            <div class="card">
+                                                <div class="card-body">
+                                                    <h5 class="card-title">Pizza Lombo com mussarela</h5>
+                                                    <p class="card-text">Lombo, mussarela e cebola</p>
+                                                    <p class="card-text"><strong>R$ 56,00 a R$ 68,00</strong></p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                                                                                
+                                        <div class="col-md-6 mb-4">
+                                            <div class="card">
+                                                <div class="card-body">
+                                                    <h5 class="card-title">Pizza Marguerita</h5>
+                                                    <p class="card-text">Mussarela, parmesão, manjerição e tomate</p>
+                                                    <p class="card-text"><strong>R$ 46,00 a R$ 58,00</strong></p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                                                                                
+                                        <div class="col-md-6 mb-4">
+                                            <div class="card">
+                                                <div class="card-body">
+                                                    <h5 class="card-title">Pizza Mussarela</h5>
+                                                    <p class="card-text">Mussarela e tomate</p>
+                                                    <p class="card-text"><strong>R$ 36,00 a R$ 48,00</strong></p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                                                                                
+                                        <div class="col-md-6 mb-4">
+                                            <div class="card">
+                                                <div class="card-body">
+                                                    <h5 class="card-title">Pizza Mussarela com alho</h5>
+                                                    <p class="card-text">Mussarela e alho frito</p>
+                                                    <p class="card-text"><strong>R$ 45,00 a R$ 57,00</strong></p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                                                                                
+                                        <div class="col-md-6 mb-4">
+                                            <div class="card">
+                                                <div class="card-body">
+                                                    <h5 class="card-title">Pizza Mussarela com aliche</h5>
+                                                    <p class="card-text">Mussarela e aliche</p>
+                                                    <p class="card-text"><strong>R$ 47,00 a R$ 59,00</strong></p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                                                                                
+                                        <div class="col-md-6 mb-4">
+                                            <div class="card">
+                                                <div class="card-body">
+                                                    <h5 class="card-title">Pizza Mussarela com milho</h5>
+                                                    <p class="card-text">Mussarela e milho</p>
+                                                    <p class="card-text"><strong>R$ 40,00 a R$ 52,00</strong></p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                                                                                
+                                        <div class="col-md-6 mb-4">
+                                            <div class="card">
+                                                <div class="card-body">
+                                                    <h5 class="card-title">Pizza Napolitana</h5>
+                                                    <p class="card-text">Mussarela, parmesão e tomate</p>
+                                                    <p class="card-text"><strong>R$ 46,00 a R$ 58,00</strong></p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                                                                                                                
+                                        <div class="col-md-6 mb-4">
+                                            <div class="card">
+                                                <div class="card-body">
+                                                    <h5 class="card-title">Pizza Palmito</h5>
+                                                    <p class="card-text">Palmito, mussarela e tomate</p>
+                                                    <p class="card-text"><strong>R$ 48,00 a R$ 60,00</strong></p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                                                                                                                
+                                        <div class="col-md-6 mb-4">
+                                            <div class="card">
+                                                <div class="card-body">
+                                                    <h5 class="card-title">Pizza Palmito especial</h5>
+                                                    <p class="card-text">Palmito, presunto e catupiry</p>
+                                                    <p class="card-text"><strong>R$ 53,00 a R$ 65,00</strong></p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                                                                                                                
+                                        <div class="col-md-6 mb-4">
+                                            <div class="card">
+                                                <div class="card-body">
+                                                    <h5 class="card-title">Pizza Peperoni</h5>
+                                                    <p class="card-text">Mussarela e fatias de peperoni</p>
+                                                    <p class="card-text"><strong>R$ 54,00 a R$ 66,00</strong></p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                                                                                                                
+                                        <div class="col-md-6 mb-4">
+                                            <div class="card">
+                                                <div class="card-body">
+                                                    <h5 class="card-title">Pizza Portuguesa</h5>
+                                                    <p class="card-text">Mussarela, presunto, ovos e cebola</p>
+                                                    <p class="card-text"><strong>R$ 50,00 a R$ 62,00</strong></p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                                                                                                                
+                                        <div class="col-md-6 mb-4">
+                                            <div class="card">
+                                                <div class="card-body">
+                                                    <h5 class="card-title">Pizza Praiana</h5>
+                                                    <p class="card-text">Atum, ervilha, palmito, ovos e mussarela</p>
+                                                    <p class="card-text"><strong>R$ 57,00 a R$ 69,00</strong></p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                                                                                                                
+                                        <div class="col-md-6 mb-4">
+                                            <div class="card">
+                                                <div class="card-body">
+                                                    <h5 class="card-title">Pizza Presunto com champignon</h5>
+                                                    <p class="card-text">Presunto, champignon e mussarela</p>
+                                                    <p class="card-text"><strong>R$ 50,00 a R$ 62,00</strong></p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                                                                                                                
+                                        <div class="col-md-6 mb-4">
+                                            <div class="card">
+                                                <div class="card-body">
+                                                    <h5 class="card-title">Pizza Presunto especial</h5>
+                                                    <p class="card-text">Presunto, ervilha, azeitona fatiada e mussarela</p>
+                                                    <p class="card-text"><strong>R$ 50,00 a R$ 62,00</strong></p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                                                                                                                
+                                        <div class="col-md-6 mb-4">
+                                            <div class="card">
+                                                <div class="card-body">
+                                                    <h5 class="card-title">Pizza Siciliana</h5>
+                                                    <p class="card-text">Mussarela, champignon e bacon</p>
+                                                    <p class="card-text"><strong>R$ 57,00 a R$ 69,00</strong></p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                                                                                                                                                
+                                        <div class="col-md-6 mb-4">
+                                            <div class="card">
+                                                <div class="card-body">
+                                                    <h5 class="card-title">Pizza Toledo</h5>
+                                                    <p class="card-text">Calabresa moida, mussarela, ovos e cebola</p>
+                                                    <p class="card-text"><strong>R$ 51,00 a R$ 63,00</strong></p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                                                                                                                                                
+                                        <div class="col-md-6 mb-4">
+                                            <div class="card">
+                                                <div class="card-body">
+                                                    <h5 class="card-title">Pizza Tomate seco</h5>
+                                                    <p class="card-text">Mussarela, manjericão e tomate seco</p>
+                                                    <p class="card-text"><strong>R$ 46,00 a R$ 58,00</strong></p>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                
+                                        <!-- Repete o esquema para outras pizzas -->
                                     </div>
                                 </div>
                                 
-                                <div class="col-md-6 mb-4">
-                                    <div class="card">
-                                        <div class="card-body">
-                                            <h5 class="card-title">Pizza 3 Queijos</h5>
-                                            <p class="card-text">Mussarela, catupiry e provolone</p>
-                                            <p class="card-text"><strong>R$ 50,00 a R$ 62,00</strong></p>
-                                        </div>
-                                    </div>
-                                </div>
-                                   
-                                <div class="col-md-6 mb-4">
-                                    <div class="card">
-                                        <div class="card-body">
-                                            <h5 class="card-title">Pizza 4 Queijos</h5>
-                                            <p class="card-text">Mussarela, catupiry, provolone e gorgonzola</p>
-                                            <p class="card-text"><strong>R$ 61,00 a R$ 70,00</strong></p>
-                                        </div>
-                                    </div>
-                                </div>
-                                   
-                                <div class="col-md-6 mb-4">
-                                    <div class="card">
-                                        <div class="card-body">
-                                            <h5 class="card-title">Pizza A Moda do Chefe</h5>
-                                            <p class="card-text">lombo, escarola, mussarela e bacon</p>
-                                            <p class="card-text"><strong>R$ 50,00 a R$ 62,00</strong></p>
-                                        </div>
-                                    </div>
-                                </div>
-                                   
-                                <div class="col-md-6 mb-4">
-                                    <div class="card">
-                                        <div class="card-body">
-                                            <h5 class="card-title">Pizza Atum</h5>
-                                            <p class="card-text">Atum ralado e cebola</p>
-                                            <p class="card-text"><strong>R$ 54,00 a R$ 62,00</strong></p>
-                                        </div>
-                                    </div>
-                                </div>
-                                   
-                                <div class="col-md-6 mb-4">
-                                    <div class="card">
-                                        <div class="card-body">
-                                            <h5 class="card-title">Pizza Atum com Catupiry</h5>
-                                            <p class="card-text">Atum ralado, cebola e Catupiry</p>
-                                            <p class="card-text"><strong>R$ 46,00 a R$ 58,00</strong></p>
-                                        </div>
-                                    </div>
-                                </div>
-                                   
-                                <div class="col-md-6 mb-4">
-                                    <div class="card">
-                                        <div class="card-body">
-                                            <h5 class="card-title">Pizza Bacon</h5>
-                                            <p class="card-text">Mussarela, ovo e Bacon</p>
-                                            <p class="card-text"><strong>R$ 50,00 a R$ 62,00</strong></p>
-                                        </div>
-                                    </div>
-                                </div>
-                                   
-                                <div class="col-md-6 mb-4">
-                                    <div class="card">
-                                        <div class="card-body">
-                                            <h5 class="card-title">Pizza Baiana</h5>
-                                            <p class="card-text">Calabresa moida,molho de pimenta e cebola</p>
-                                            <p class="card-text"><strong>R$ 40,00 a R$ 52,00</strong></p>
-                                        </div>
-                                    </div>
-                                </div>
-                                   
-                                <div class="col-md-6 mb-4">
-                                    <div class="card">
-                                        <div class="card-body">
-                                            <h5 class="card-title">Pizza Bauru</h5>
-                                            <p class="card-text">Presunto, mussarela e tomate</p>
-                                            <p class="card-text"><strong>R$ 48,00 a R$ 60,00</strong></p>
-                                        </div>
-                                    </div>
-                                </div>
-                                   
-                                <div class="col-md-6 mb-4">
-                                    <div class="card">
-                                        <div class="card-body">
-                                            <h5 class="card-title">Pizza Brócolis</h5>
-                                            <p class="card-text">Brócolis, mussarela e alho frito</p>
-                                            <p class="card-text"><strong>R$ 48,00 a R$ 60,00</strong></p>
-                                        </div>
-                                    </div>
-                                </div>
-                                   
-                                <div class="col-md-6 mb-4">
-                                    <div class="card">
-                                        <div class="card-body">
-                                            <h5 class="card-title">Pizza Calabresa</h5>
-                                            <p class="card-text">Calabresa e cebola</p>
-                                            <p class="card-text"><strong>R$ 36,00 a R$ 48,00</strong></p>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <div class="col-md-6 mb-4">
-                                    <div class="card">
-                                        <div class="card-body">
-                                            <h5 class="card-title">Pizza Calabresa com mussarela</h5>
-                                            <p class="card-text">Calabresa moida, mussarela e cebola</p>
-                                            <p class="card-text"><strong>R$ 48,00 a R$ 60,00</strong></p>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <div class="col-md-6 mb-4">
-                                    <div class="card">
-                                        <div class="card-body">
-                                            <h5 class="card-title">Pizza Calacatu</h5>
-                                            <p class="card-text">Calabresa fatiada, catupiry e cebola</p>
-                                            <p class="card-text"><strong>R$ 48,00 a R$ 60,00</strong></p>
-                                        </div>
-                                    </div>
-                                </div>
                                 
+                            </div>
+                            <div class="tab-pane fade" id="pizzasDoces" role="tabpanel" aria-labelledby="pizzasDoces-tab">
+                                <h1 class="titulo">Pizzas Doces</h1>
+                                <div class="container mt-4">
+                            <div class="row">                                                                                                                           
                                 <div class="col-md-6 mb-4">
                                     <div class="card">
                                         <div class="card-body">
-                                            <h5 class="card-title">Pizza Catupira</h5>
-                                            <p class="card-text">Catupiry e milho</p>
+                                            <h5 class="card-title">Pizza de Banana</h5>
+                                            <p class="card-text">Banana com açucar e canela</p>
+                                            <p class="card-text"><strong>R$ 35,00 a R$ 47,00</strong></p>
+                                        </div>
+                                    </div>
+                                </div>
+                                                                                                                                                                                
+                                <div class="col-md-6 mb-4">
+                                    <div class="card">
+                                        <div class="card-body">
+                                            <h5 class="card-title">Pizza de Banana com chocolate</h5>
+                                            <p class="card-text">Banana, açucar com canela e chocolate</p>
                                             <p class="card-text"><strong>R$ 41,00 a R$ 53,00</strong></p>
                                         </div>
                                     </div>
                                 </div>
-                                
+                                                                                                                                                                                
                                 <div class="col-md-6 mb-4">
                                     <div class="card">
                                         <div class="card-body">
-                                            <h5 class="card-title">Pizza Catupiry</h5>
-                                            <p class="card-text">Catupiry e tomate</p>
-                                            <p class="card-text"><strong>R$ 38,00 a R$ 50,00</strong></p>
-                                        </div>
-                                    </div>
-                                </div>
-                                
-                                <div class="col-md-6 mb-4">
-                                    <div class="card">
-                                        <div class="card-body">
-                                            <h5 class="card-title">Pizza Escarola</h5>
-                                            <p class="card-text">Escarola refogada e mussarela</p>
+                                            <h5 class="card-title">Pizza de Brigadeiro</h5>
+                                            <p class="card-text">Chocolate, chocolate granulado e cereja</p>
                                             <p class="card-text"><strong>R$ 43,00 a R$ 55,00</strong></p>
                                         </div>
                                     </div>
                                 </div>
-                                
+                                                                                                                                                                                
                                 <div class="col-md-6 mb-4">
                                     <div class="card">
                                         <div class="card-body">
-                                            <h5 class="card-title">Pizza Frango com catupiry</h5>
-                                            <p class="card-text">Frango, catupiry e cebola</p>
-                                            <p class="card-text"><strong>R$ 50,00 a R$ 62,00</strong></p>
+                                            <h5 class="card-title">Pizza de Romeu e Julieta</h5>
+                                            <p class="card-text">Goiabada e mussarela</p>
+                                            <p class="card-text"><strong>R$ 37,00 a R$ 49,00</strong></p>
                                         </div>
                                     </div>
                                 </div>
-                                
+                                                                                                                                                                                
                                 <div class="col-md-6 mb-4">
                                     <div class="card">
                                         <div class="card-body">
-                                            <h5 class="card-title">Pizza Frango com catupiry e milho</h5>
-                                            <p class="card-text">Frango desfiado, catupiry e milho</p>
-                                            <p class="card-text"><strong>R$ 53,00 a R$ 65,00</strong></p>
+                                            <h5 class="card-title">Pizza de Abacaxi</h5>
+                                            <p class="card-text">mussarela, fatias de abacaxi e açúcar </p>
+                                            <p class="card-text"><strong>R$ 37,00 a R$ 49,00</strong></p>
                                         </div>
                                     </div>
                                 </div>
-                                                                
+                                                                                                                                                                                
                                 <div class="col-md-6 mb-4">
                                     <div class="card">
                                         <div class="card-body">
-                                            <h5 class="card-title">Pizza Frango caipira</h5>
-                                            <p class="card-text">Frango, mussarela e milho</p>
-                                            <p class="card-text"><strong>R$ 59,00 a R$ 65,00</strong></p>
+                                            <h5 class="card-title">Pizza de Salada de frutas</h5>
+                                            <p class="card-text">mussarela, fatias de abacaxi, banana , pêssego, ameixa , cerejas , maçã e açúcar (opcional de leite condensado cobrado à parte )</p>
+                                            <p class="card-text"><strong>R$ 45,00 a R$ 62,00</strong></p>
                                         </div>
                                     </div>
                                 </div>
-                                                                
+                                                                                                                                                                                                        
                                 <div class="col-md-6 mb-4">
                                     <div class="card">
                                         <div class="card-body">
-                                            <h5 class="card-title">Pizza GORGONZOLA</h5>
-                                            <p class="card-text">GORGONZOLA</p>
-                                            <p class="card-text"><strong>R$ 78,00 a R$ 90,00</strong></p>
+                                            <h5 class="card-title">Pizza de Formigueiro</h5>
+                                            <p class="card-text">ganache de chocolate ao leite com doce de leite , chocolate granulado</p>
+                                            <p class="card-text"><strong>R$ 39,00 a R$ 57,00</strong></p>
                                         </div>
                                     </div>
                                 </div>
-                                                                
+                            </div>
+                        </div>
+                            </div>
+                            <div class="tab-pane fade" id="refrigerantes" role="tabpanel" aria-labelledby="refrigerantes-tab">
+                                <h1 class="titulo">Refrigerantes e Água</h1>
+                                <div class="container mt-4">
+                            <div class="row">                                                                                                                                                                                                                                     
                                 <div class="col-md-6 mb-4">
                                     <div class="card">
                                         <div class="card-body">
-                                            <h5 class="card-title">Pizza Itanhaém</h5>
-                                            <p class="card-text">Mussarela, alho frito e manjericão</p>
-                                            <p class="card-text"><strong>R$ 43,00 a R$ 55,00</strong></p>
+                                            <h5 class="card-title">Água mineral sem gás 500ml</h5>
+                                            <p class="card-text"><strong>R$ 4,50</strong></p>
                                         </div>
                                     </div>
                                 </div>
-                                                                
+                                                                                                                                                                                                                                                        
                                 <div class="col-md-6 mb-4">
                                     <div class="card">
                                         <div class="card-body">
-                                            <h5 class="card-title">Pizza Lombo</h5>
-                                            <p class="card-text">Lombo fatiado e cebola</p>
-                                            <p class="card-text"><strong>R$ 49,00 a R$ 61,00</strong></p>
+                                            <h5 class="card-title">Água Tônica</h5>
+                                            <p class="card-text"><srong>R$ 6,50</srong></p>
                                         </div>
                                     </div>
                                 </div>
-                                                                
+                                                                                                                                                                                                                                                        
                                 <div class="col-md-6 mb-4">
                                     <div class="card">
                                         <div class="card-body">
-                                            <h5 class="card-title">Pizza Lombo com catupiry</h5>
-                                            <p class="card-text">Lombo, catupiry e cebola</p>
-                                            <p class="card-text"><strong>R$ 56,00 a R$ 68,00</strong></p>
-                                        </div>
-                                    </div>
-                                </div>         
-
-                                <div class="col-md-6 mb-4">
-                                    <div class="card">
-                                        <div class="card-body">
-                                            <h5 class="card-title">Pizza Lombo com mussarela</h5>
-                                            <p class="card-text">Lombo, mussarela e cebola</p>
-                                            <p class="card-text"><strong>R$ 56,00 a R$ 68,00</strong></p>
+                                            <h5 class="card-title">Coca cola 2 litros</h5>
+                                            <p class="card-text"><strong>R$ 19,00</strong></p>
                                         </div>
                                     </div>
                                 </div>
-                                                                                        
+                                                                                                                                                                                                                                                        
                                 <div class="col-md-6 mb-4">
                                     <div class="card">
                                         <div class="card-body">
-                                            <h5 class="card-title">Pizza Marguerita</h5>
-                                            <p class="card-text">Mussarela, parmesão, manjerição e tomate</p>
-                                            <p class="card-text"><strong>R$ 46,00 a R$ 58,00</strong></p>
+                                            <h5 class="card-title">Coca cola 600ml</h5>
+                                            <p class="card-text"><strong>R$ 11,00</strong></p>
                                         </div>
                                     </div>
                                 </div>
-                                                                                        
+                                                                                                                                                                                                                                                        
                                 <div class="col-md-6 mb-4">
                                     <div class="card">
                                         <div class="card-body">
-                                            <h5 class="card-title">Pizza Mussarela</h5>
-                                            <p class="card-text">Mussarela e tomate</p>
-                                            <p class="card-text"><strong>R$ 36,00 a R$ 48,00</strong></p>
+                                            <h5 class="card-title">Coca cola lata 350ml</h5>
+                                            <p class="card-text"><strong>R$ 6,50</strong></p>
                                         </div>
                                     </div>
                                 </div>
-                                                                                        
+                                                                                                                                                                                                                                                                                
                                 <div class="col-md-6 mb-4">
                                     <div class="card">
                                         <div class="card-body">
-                                            <h5 class="card-title">Pizza Mussarela com alho</h5>
-                                            <p class="card-text">Mussarela e alho frito</p>
-                                            <p class="card-text"><strong>R$ 45,00 a R$ 57,00</strong></p>
+                                            <h5 class="card-title">Coca cola zero lata 350ml</h5>
+                                            <p class="card-text"><strong>R$ 6,50</strong></p>
                                         </div>
                                     </div>
                                 </div>
-                                                                                        
+                                                                                                                                                                                                                                                                                
                                 <div class="col-md-6 mb-4">
                                     <div class="card">
                                         <div class="card-body">
-                                            <h5 class="card-title">Pizza Mussarela com aliche</h5>
-                                            <p class="card-text">Mussarela e aliche</p>
-                                            <p class="card-text"><strong>R$ 47,00 a R$ 59,00</strong></p>
+                                            <h5 class="card-title">GUARANÁ 600ml</h5>
+                                            <p class="card-text"><strong>R$ 11,00</strong></p>
                                         </div>
                                     </div>
                                 </div>
-                                                                                        
+                                                                                                                                                                                                                                                                                
                                 <div class="col-md-6 mb-4">
                                     <div class="card">
                                         <div class="card-body">
-                                            <h5 class="card-title">Pizza Mussarela com milho</h5>
-                                            <p class="card-text">Mussarela e milho</p>
-                                            <p class="card-text"><strong>R$ 40,00 a R$ 52,00</strong></p>
+                                            <h5 class="card-title">Guaraná antartica 2 litros</h5>
+                                            <p class="card-text"><strong>R$ 19,00</strong></p>
                                         </div>
                                     </div>
                                 </div>
-                                                                                        
+                                                                                                                                                                                                                                                                                
                                 <div class="col-md-6 mb-4">
                                     <div class="card">
                                         <div class="card-body">
-                                            <h5 class="card-title">Pizza Napolitana</h5>
-                                            <p class="card-text">Mussarela, parmesão e tomate</p>
-                                            <p class="card-text"><strong>R$ 46,00 a R$ 58,00</strong></p>
+                                            <h5 class="card-title">Guarana lata 350ml</h5>
+                                            <p class="card-text"><strong>R$ 6,50</strong></p>
                                         </div>
                                     </div>
                                 </div>
-                                                                                                                        
-                                <div class="col-md-6 mb-4">
-                                    <div class="card">
-                                        <div class="card-body">
-                                            <h5 class="card-title">Pizza Palmito</h5>
-                                            <p class="card-text">Palmito, mussarela e tomate</p>
-                                            <p class="card-text"><strong>R$ 48,00 a R$ 60,00</strong></p>
-                                        </div>
-                                    </div>
-                                </div>
-                                                                                                                        
-                                <div class="col-md-6 mb-4">
-                                    <div class="card">
-                                        <div class="card-body">
-                                            <h5 class="card-title">Pizza Palmito especial</h5>
-                                            <p class="card-text">Palmito, presunto e catupiry</p>
-                                            <p class="card-text"><strong>R$ 53,00 a R$ 65,00</strong></p>
-                                        </div>
-                                    </div>
-                                </div>
-                                                                                                                        
-                                <div class="col-md-6 mb-4">
-                                    <div class="card">
-                                        <div class="card-body">
-                                            <h5 class="card-title">Pizza Peperoni</h5>
-                                            <p class="card-text">Mussarela e fatias de peperoni</p>
-                                            <p class="card-text"><strong>R$ 54,00 a R$ 66,00</strong></p>
-                                        </div>
-                                    </div>
-                                </div>
-                                                                                                                        
-                                <div class="col-md-6 mb-4">
-                                    <div class="card">
-                                        <div class="card-body">
-                                            <h5 class="card-title">Pizza Portuguesa</h5>
-                                            <p class="card-text">Mussarela, presunto, ovos e cebola</p>
-                                            <p class="card-text"><strong>R$ 50,00 a R$ 62,00</strong></p>
-                                        </div>
-                                    </div>
-                                </div>
-                                                                                                                        
-                                <div class="col-md-6 mb-4">
-                                    <div class="card">
-                                        <div class="card-body">
-                                            <h5 class="card-title">Pizza Praiana</h5>
-                                            <p class="card-text">Atum, ervilha, palmito, ovos e mussarela</p>
-                                            <p class="card-text"><strong>R$ 57,00 a R$ 69,00</strong></p>
-                                        </div>
-                                    </div>
-                                </div>
-                                                                                                                        
-                                <div class="col-md-6 mb-4">
-                                    <div class="card">
-                                        <div class="card-body">
-                                            <h5 class="card-title">Pizza Presunto com champignon</h5>
-                                            <p class="card-text">Presunto, champignon e mussarela</p>
-                                            <p class="card-text"><strong>R$ 50,00 a R$ 62,00</strong></p>
-                                        </div>
-                                    </div>
-                                </div>
-                                                                                                                        
-                                <div class="col-md-6 mb-4">
-                                    <div class="card">
-                                        <div class="card-body">
-                                            <h5 class="card-title">Pizza Presunto especial</h5>
-                                            <p class="card-text">Presunto, ervilha, azeitona fatiada e mussarela</p>
-                                            <p class="card-text"><strong>R$ 50,00 a R$ 62,00</strong></p>
-                                        </div>
-                                    </div>
-                                </div>
-                                                                                                                        
-                                <div class="col-md-6 mb-4">
-                                    <div class="card">
-                                        <div class="card-body">
-                                            <h5 class="card-title">Pizza Siciliana</h5>
-                                            <p class="card-text">Mussarela, champignon e bacon</p>
-                                            <p class="card-text"><strong>R$ 57,00 a R$ 69,00</strong></p>
-                                        </div>
-                                    </div>
-                                </div>
-                                                                                                                                                        
-                                <div class="col-md-6 mb-4">
-                                    <div class="card">
-                                        <div class="card-body">
-                                            <h5 class="card-title">Pizza Toledo</h5>
-                                            <p class="card-text">Calabresa moida, mussarela, ovos e cebola</p>
-                                            <p class="card-text"><strong>R$ 51,00 a R$ 63,00</strong></p>
-                                        </div>
-                                    </div>
-                                </div>
-                                                                                                                                                        
-                                <div class="col-md-6 mb-4">
-                                    <div class="card">
-                                        <div class="card-body">
-                                            <h5 class="card-title">Pizza Tomate seco</h5>
-                                            <p class="card-text">Mussarela, manjericão e tomate seco</p>
-                                            <p class="card-text"><strong>R$ 46,00 a R$ 58,00</strong></p>
-                                        </div>
-                                    </div>
+                            </div>
                                 </div>
 
-                        
-                                <!-- Repete o esquema para outras pizzas -->
                             </div>
-                        </div>
-                        
-                        
-                    </div>
-                    <div class="tab-pane fade" id="pizzasDoces" role="tabpanel" aria-labelledby="pizzasDoces-tab">
-                        <h1>Pizzas doces</h1>
-                        <div class="container mt-4">
-                       <div class="row">                                                                                                                           
-                        <div class="col-md-6 mb-4">
-                            <div class="card">
-                                <div class="card-body">
-                                    <h5 class="card-title">Pizza de Banana</h5>
-                                    <p class="card-text">Banana com açucar e canela</p>
-                                    <p class="card-text"><strong>R$ 35,00 a R$ 47,00</strong></p>
+                            <div class="tab-pane fade" id="sucos" role="tabpanel" aria-labelledby="sucos-tab">
+                                <h1 class="titulo">Sucos</h1>
+                                <div class="container mt-4">
+                            <div class="row">                                                                                                                                                                                                                                                            
+                                <div class="col-md-6 mb-4">
+                                    <div class="card">
+                                        <div class="card-body">
+                                            <h5 class="card-title">Del Valle Morango 290 ML</h5>
+                                            <p class="card-text"><strong>R$ 7,00</strong></p>
+                                        </div>
+                                    </div>
+                                </div>
+                                                                                                                                                                                                                                                                                                                                
+                                <div class="col-md-6 mb-4">
+                                    <div class="card">
+                                        <div class="card-body">
+                                            <h5 class="card-title">Del Valle Manga 290 ML</h5>
+                                            <p class="card-text"><strong>R$ 7,00</strong></p>
+                                        </div>
+                                    </div>
+                                </div>
+                                                                                                                                                                                                                                                                                                                                
+                                <div class="col-md-6 mb-4">
+                                    <div class="card">
+                                        <div class="card-body">
+                                            <h5 class="card-title">Del Valle Abacaxi 290 ML</h5>
+                                            <p class="card-text"><strong>R$ 7,00</strong></p>
+                                        </div>
+                                    </div>
+                                </div>
+                                                                                                                                                                                                                                                                                                                                
+                                <div class="col-md-6 mb-4">
+                                    <div class="card">
+                                        <div class="card-body">
+                                            <h5 class="card-title">Del Valle catuaba 290 ML</h5>
+                                            <p class="card-text"><strong>R$ 7,00</strong></p>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
-                                                                                                                                                                          
-                        <div class="col-md-6 mb-4">
-                            <div class="card">
-                                <div class="card-body">
-                                    <h5 class="card-title">Pizza de Banana com chocolate</h5>
-                                    <p class="card-text">Banana, açucar com canela e chocolate</p>
-                                    <p class="card-text"><strong>R$ 41,00 a R$ 53,00</strong></p>
                                 </div>
                             </div>
-                        </div>
-                                                                                                                                                                          
-                        <div class="col-md-6 mb-4">
-                            <div class="card">
-                                <div class="card-body">
-                                    <h5 class="card-title">Pizza de Brigadeiro</h5>
-                                    <p class="card-text">Chocolate, chocolate granulado e cereja</p>
-                                    <p class="card-text"><strong>R$ 43,00 a R$ 55,00</strong></p>
+                            <div class="tab-pane fade" id="cervejas" role="tabpanel" aria-labelledby="cervejas-tab">
+                                <h1 class="titulo">Cervejas</h1>
+                                <div class="container mt-4">
+                            <div class="row">                                                                                                                                                                                                                                                                                                  
+                                <div class="col-md-6 mb-4">
+                                    <div class="card">
+                                        <div class="card-body">
+                                            <h5 class="card-title">Brahma 350 ML</h5>
+                                            <p class="card-text"><strong>R$ 9,00</strong></p>
+                                        </div>
+                                    </div>
+                                </div>
+                                                                                                                                                                                                                                                                                                                                
+                                <div class="col-md-6 mb-4">
+                                    <div class="card">
+                                        <div class="card-body">
+                                            <h5 class="card-title">Skol 350 ML</h5>
+                                            <p class="card-text"><strong>R$ 8,50</strong></p>
+                                        </div>
+                                    </div>
+                                </div>
+                                                                                                                                                                                                                                                                                                                                
+                                <div class="col-md-6 mb-4">
+                                    <div class="card">
+                                        <div class="card-body">
+                                            <h5 class="card-title">heineken 350 ML</h5>
+                                            <p class="card-text"><strong>R$ 7,00</strong></p>
+                                        </div>
+                                    </div>
+                                </div>
+                                                                                                                                                                                                                                                                                                                                
+                                <div class="col-md-6 mb-4">
+                                    <div class="card">
+                                        <div class="card-body">
+                                            <h5 class="card-title">Antarctica 350 ML</h5>
+                                            <p class="card-text"><strong>R$ 10,00</strong></p>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
-                                                                                                                                                                          
-                        <div class="col-md-6 mb-4">
-                            <div class="card">
-                                <div class="card-body">
-                                    <h5 class="card-title">Pizza de Romeu e Julieta</h5>
-                                    <p class="card-text">Goiabada e mussarela</p>
-                                    <p class="card-text"><strong>R$ 37,00 a R$ 49,00</strong></p>
                                 </div>
                             </div>
-                        </div>
-                                                                                                                                                                          
-                        <div class="col-md-6 mb-4">
-                            <div class="card">
-                                <div class="card-body">
-                                    <h5 class="card-title">Pizza de Abacaxi</h5>
-                                    <p class="card-text">mussarela, fatias de abacaxi e açúcar </p>
-                                    <p class="card-text"><strong>R$ 37,00 a R$ 49,00</strong></p>
-                                </div>
-                            </div>
-                        </div>
-                                                                                                                                                                          
-                        <div class="col-md-6 mb-4">
-                            <div class="card">
-                                <div class="card-body">
-                                    <h5 class="card-title">Pizza de Salada de frutas</h5>
-                                    <p class="card-text">mussarela, fatias de abacaxi, banana , pêssego, ameixa , cerejas , maçã e açúcar (opcional de leite condensado cobrado à parte )</p>
-                                    <p class="card-text"><strong>R$ 45,00 a R$ 62,00</strong></p>
-                                </div>
-                            </div>
-                        </div>
-                                                                                                                                                                                                  
-                        <div class="col-md-6 mb-4">
-                            <div class="card">
-                                <div class="card-body">
-                                    <h5 class="card-title">Pizza de Formigueiro</h5>
-                                    <p class="card-text">ganache de chocolate ao leite com doce de leite , chocolate granulado</p>
-                                    <p class="card-text"><strong>R$ 39,00 a R$ 57,00</strong></p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                    </div>
-                    <div class="tab-pane fade" id="refrigerantes" role="tabpanel" aria-labelledby="refrigerantes-tab">
-                        <h1>Refrigerantes e Agua</h1>
-                        <div class="container mt-4">
-                       <div class="row">                                                                                                                                                                                                                                     
-                        <div class="col-md-6 mb-4">
-                            <div class="card">
-                                <div class="card-body">
-                                    <h5 class="card-title">Agua mineral sem gás 500ml</h5>
-                                    <p class="card-text"><strong>R$ 4,50</strong></p>
-                                </div>
-                            </div>
-                        </div>
-                                                                                                                                                                                                                                                  
-                        <div class="col-md-6 mb-4">
-                            <div class="card">
-                                <div class="card-body">
-                                    <h5 class="card-title">Agua Tônica</h5>
-                                    <p class="card-text"><strong>R$ 6,50</strong></p>
-                                </div>
-                            </div>
-                        </div>
-                                                                                                                                                                                                                                                  
-                        <div class="col-md-6 mb-4">
-                            <div class="card">
-                                <div class="card-body">
-                                    <h5 class="card-title">Coca cola 2 litros</h5>
-                                    <p class="card-text"><strong>R$ 19,00</strong></p>
-                                </div>
-                            </div>
-                        </div>
-                                                                                                                                                                                                                                                  
-                        <div class="col-md-6 mb-4">
-                            <div class="card">
-                                <div class="card-body">
-                                    <h5 class="card-title">Coca cola 600ml</h5>
-                                    <p class="card-text"><strong>R$ 11,00</strong></p>
-                                </div>
-                            </div>
-                        </div>
-                                                                                                                                                                                                                                                  
-                        <div class="col-md-6 mb-4">
-                            <div class="card">
-                                <div class="card-body">
-                                    <h5 class="card-title">Coca cola lata 350ml</h5>
-                                    <p class="card-text"><strong>R$ 6,50</strong></p>
-                                </div>
-                            </div>
-                        </div>
-                                                                                                                                                                                                                                                                          
-                        <div class="col-md-6 mb-4">
-                            <div class="card">
-                                <div class="card-body">
-                                    <h5 class="card-title">Coca cola zero lata 350ml</h5>
-                                    <p class="card-text"><strong>R$ 6,50</strong></p>
-                                </div>
-                            </div>
-                        </div>
-                                                                                                                                                                                                                                                                          
-                        <div class="col-md-6 mb-4">
-                            <div class="card">
-                                <div class="card-body">
-                                    <h5 class="card-title">GUARANÁ 600ml</h5>
-                                    <p class="card-text"><strong>R$ 11,00</strong></p>
-                                </div>
-                            </div>
-                        </div>
-                                                                                                                                                                                                                                                                          
-                        <div class="col-md-6 mb-4">
-                            <div class="card">
-                                <div class="card-body">
-                                    <h5 class="card-title">Guaraná antartica 2 litros</h5>
-                                    <p class="card-text"><strong>R$ 19,00</strong></p>
-                                </div>
-                            </div>
-                        </div>
-                                                                                                                                                                                                                                                                          
-                        <div class="col-md-6 mb-4">
-                            <div class="card">
-                                <div class="card-body">
-                                    <h5 class="card-title">Guarana lata 350ml</h5>
-                                    <p class="card-text"><strong>R$ 6,50</strong></p>
-                                </div>
-                            </div>
-                        </div>
-                       </div>
-                        </div>
-
-                    </div>
-                    <div class="tab-pane fade" id="sucos" role="tabpanel" aria-labelledby="sucos-tab">
-                        <h1>Sucos</h1>
-                        <div class="container mt-4">
-                       <div class="row">                                                                                                                                                                                                                                                            
-                        <div class="col-md-6 mb-4">
-                            <div class="card">
-                                <div class="card-body">
-                                    <h5 class="card-title">Del Valle Morango 290 ML</h5>
-                                    <p class="card-text"><strong>R$ 7,00</strong></p>
-                                </div>
-                            </div>
-                        </div>
-                                                                                                                                                                                                                                                                                                                        
-                        <div class="col-md-6 mb-4">
-                            <div class="card">
-                                <div class="card-body">
-                                    <h5 class="card-title">Del Valle Manga 290 ML</h5>
-                                    <p class="card-text"><strong>R$ 7,00</strong></p>
-                                </div>
-                            </div>
-                        </div>
-                                                                                                                                                                                                                                                                                                                        
-                        <div class="col-md-6 mb-4">
-                            <div class="card">
-                                <div class="card-body">
-                                    <h5 class="card-title">Del Valle Abacaxi 290 ML</h5>
-                                    <p class="card-text"><strong>R$ 7,00</strong></p>
-                                </div>
-                            </div>
-                        </div>
-                                                                                                                                                                                                                                                                                                                        
-                        <div class="col-md-6 mb-4">
-                            <div class="card">
-                                <div class="card-body">
-                                    <h5 class="card-title">Del Valle catuaba 290 ML</h5>
-                                    <p class="card-text"><strong>R$ 7,00</strong></p>
-                                </div>
-                            </div>
-                        </div>
-                       </div>
-                        </div>
-                    </div>
-                    <div class="tab-pane fade" id="cervejas" role="tabpanel" aria-labelledby="cervejas-tab">
-                        <h1>Cervejas</h1>
-                        <div class="container mt-4">
-                       <div class="row">                                                                                                                                                                                                                                                                                                  
-                        <div class="col-md-6 mb-4">
-                            <div class="card">
-                                <div class="card-body">
-                                    <h5 class="card-title">Brahma 350 ML</h5>
-                                    <p class="card-text"><strong>R$ 9,00</strong></p>
-                                </div>
-                            </div>
-                        </div>
-                                                                                                                                                                                                                                                                                                                        
-                        <div class="col-md-6 mb-4">
-                            <div class="card">
-                                <div class="card-body">
-                                    <h5 class="card-title">Skol 350 ML</h5>
-                                    <p class="card-text"><strong>R$ 8,50</strong></p>
-                                </div>
-                            </div>
-                        </div>
-                                                                                                                                                                                                                                                                                                                        
-                        <div class="col-md-6 mb-4">
-                            <div class="card">
-                                <div class="card-body">
-                                    <h5 class="card-title">heineken 350 ML</h5>
-                                    <p class="card-text"><strong>R$ 7,00</strong></p>
-                                </div>
-                            </div>
-                        </div>
-                                                                                                                                                                                                                                                                                                                        
-                        <div class="col-md-6 mb-4">
-                            <div class="card">
-                                <div class="card-body">
-                                    <h5 class="card-title">Antarctica 350 ML</h5>
-                                    <p class="card-text"><strong>R$ 10,00</strong></p>
-                                </div>
-                            </div>
-                        </div>
-                       </div>
-                        </div>
-                    </div>
-                </div>
-        
-            <hr>        
-        </main>
-        <footer>
-            Desenvolvido por Fabricio Hipólito, Isaac da Silva, Pedro Henrique e André de Pontes
-        </footer>
-        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
-        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
-    </body>
-    </html>
+                        </div>        
+                </main>
+                <footer>
+                    <div class="devs">Desenvolvido por Fabricio Hipólito, Isaac da Silva, Pedro Henrique e André de Pontes</div>
+                </footer>
+                <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+                <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+                <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+            </body>
+            </html>

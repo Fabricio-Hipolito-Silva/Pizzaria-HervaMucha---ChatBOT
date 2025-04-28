@@ -1,0 +1,149 @@
+body {
+    font-family: 'Poppins', sans-serif;
+}
+
+/* Barra Superior CSS */
+
+.barraSup .conteudoBarraSup {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+    padding: 15px;
+    background-color: #78281F;
+}
+
+.barraSup .conteudoBarraSup .telefone {
+    color: #F5F5DC;
+}
+
+.barraSup .conteudoBarraSup .icons {
+    display: flex;
+    align-items: center; 
+    gap: 10px;
+    color: #F5F5DC;
+}
+
+/* Barra Inferior CSS */
+.barraInf {
+    position: relative; 
+    background-image: url("../img/fundo_Pizza.jpg");
+    background-size: cover;
+    background-position: center; 
+    background-repeat: no-repeat;
+    overflow: hidden;
+}
+ 
+.titulo{
+        font-size: 70px;
+        font-family: 'Fredoka', cursive;
+}
+
+.endereco{
+    font-size: 20px;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    align-items: center;
+}
+
+.endereco i {
+    margin-bottom: 10px;
+}
+
+.barraInf .fundoBlur {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url("../img/fundo_Pizza.jpg");
+    background-size: cover;
+    background-position: center;
+    filter: blur(5px); /* AQUI é filter, não backdrop-filter */
+    z-index: 0; /* fica atrás */
+}
+
+.barraInf .conteudoBarraInf {
+    position: relative;
+    z-index: 1; /* fica na frente */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    color: white; /* ou outra cor pra texto */
+    padding-top: 60px;
+}
+
+.barraInf .conteudoBarraInf .textoBarraInf{
+    text-align: center;
+    padding: 25px;
+    color: #F5F5DC;
+
+}
+
+.modal_funcionamento{
+    background-color: transparent;
+    border: none;
+    color: #F5F5DC;
+}
+
+.barraInf .logoPizzaria{
+    width: 200px;
+    height: 200px;
+    border-radius: 100%;
+}
+
+/* Nav Bar Main CSS */
+
+main {
+    background-color: #F5F5DC;
+}
+
+.nav-tabs {
+    font-size: 20px;
+    padding: 20px;
+    position: sticky;
+    top: 0;
+    background-color: #F5F5DC; /* pra não ficar transparente */
+    z-index: 999;
+}
+
+.nav-link {
+    color: #78281F;
+}
+
+.nav-tabs .nav-link.active {
+    background-color: #78281F;
+    color: white;
+    border-color: #78281F #78281F transparent; /* opcional para melhorar a borda */
+}
+
+.tab-pane .titulo {
+    color: #78281F;
+    font-size: 45px;
+    padding: 20px;
+    font-family: 'Poppins', sans-serif;
+}
+
+.card {
+    border-radius: 15px;
+    overflow: hidden; 
+}
+
+.card .card-body{
+    background-color: #78281F;
+    color:#F5F5DC;
+}
+
+.devs{
+    display: flex;
+    align-items: center;
+    justify-content: center; /* CENTRALIZA */
+    gap: 10px;
+    padding: 15px;
+    background-color: #78281F;
+    color: #F5F5DC;
+    text-align: center; 
+}
