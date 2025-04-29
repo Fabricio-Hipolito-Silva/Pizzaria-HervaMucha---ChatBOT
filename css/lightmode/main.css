@@ -1,0 +1,41 @@
+/* Nav Bar Main CSS */
+
+main {
+    background-color: #F5F5DC;
+}
+
+.nav-tabs {
+    font-size: 20px;
+    padding: 20px;
+    position: sticky;
+    top: 0;
+    background-color: #F5F5DC; /* pra não ficar transparente */
+    z-index: 999;
+}
+
+.nav-link {
+    color: #78281F;
+}
+
+.nav-tabs .nav-link.active {
+    background-color: #78281F;
+    color: white;
+    border-color: #78281F #78281F transparent; /* opcional para melhorar a borda */
+}
+
+.tab-pane .titulo {
+    color: #78281F;
+    font-size: 45px;
+    padding: 20px;
+    font-family: 'Poppins', sans-serif;
+}
+
+.card {
+    border-radius: 15px;
+    overflow: hidden; 
+}
+
+.card .card-body{
+    background-color: #78281F;
+    color:#F5F5DC;
+}

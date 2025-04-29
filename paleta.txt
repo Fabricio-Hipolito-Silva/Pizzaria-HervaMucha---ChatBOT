@@ -3,3 +3,7 @@ Botões | Verde Folha
 Fundos | Cinza Chumbo (Modo Dark) #34495E | Bege Claro (Modo Claro) #F5F5DC
 Títulos | Amarelo Queimado #F4D03F
 Destaques | Bordô Escuro #78281F
+
+
+Rosa #fcb4ac
+Preto #0c0c04

@@ -10,8 +10,12 @@
                 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
                 <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@300..700&display=swap" rel="stylesheet">
                 <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Poppins:wght@400;700&display=swap" rel="stylesheet">   
-                <link rel="stylesheet" href="css/style.css">
-
+                <link id="header-css" rel="stylesheet" href="css/lightmode/header.css">
+                <link id="main-css" rel="stylesheet" href="css/lightmode/main.css">
+                <link id="footer-css" rel="stylesheet" href="css/lightmode/footer.css">
+                <!-- <link rel="stylesheet" href="css/darkmode/header.css">
+                <link rel="stylesheet" href="css/darkmode/main.css">
+                <link rel="stylesheet" href="css/darkmode/footer.css"> -->
             </head>
             <body>
                 <header>
@@ -22,10 +26,10 @@
                             <i class="fa-brands fa-whatsapp fa-lg"></i>
                             <i class="fa-brands fa-facebook fa-lg"></i>
                             <i class="fa-brands fa-instagram fa-lg"></i> |
-                            <i class="fa-solid fa-plus fa-lg"></i>
-                            <i class="fa-solid fa-minus fa-lg"></i> 
-                            <i class="fa-solid fa-moon fa-lg"></i>
-                            <i class="fa-solid fa-sun fa-lg"></i>
+                            <a id="aumentar_tmh"><i class="fa-solid fa-plus fa-lg"></i></a>
+                            <a id="diminuir_tmh"><i class="fa-solid fa-minus fa-lg"></i></a> 
+                            <a id="darkmode"><i class="fa-solid fa-moon fa-lg"></i></a>
+                            <a id="lightmode"><i class="fa-solid fa-sun fa-lg"></i></a>
                             </div>
                         </div>
                     </section>
@@ -33,7 +37,7 @@
                     <section class="barraInf">
                     <div class="fundoBlur"></div>
                     <div class="conteudoBarraInf">
-                    <img class="logoPizzaria" src="img/Os de VDD.jpg" alt="pizzaria">
+                    <img class="logoPizzaria" src="img/placeholder logo Herva Mucha.jpg" alt="pizzaria">
                     <div class="textoBarraInf">
                     <h2 class="titulo">Pizzaria HervaMucha</h2>
                     <span class="endereco">
@@ -730,8 +734,10 @@
                         </div>        
                 </main>
                 <footer>
-                    <div class="devs">Desenvolvido por Fabricio Hipólito, Isaac da Silva, Pedro Henrique e André de Pontes</div>
+                    <div class="devs">Desenvolvido por Fabricio Hipólito, Isaac da Silva, Pedro Henrique, André de Pontes e Gabriel Silva</div>
                 </footer>
+                <script src="js/alterar_tema.js"></script>
+                <script src="js/alterar_tmh_fonte.js"></script>
                 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
                 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
                 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>

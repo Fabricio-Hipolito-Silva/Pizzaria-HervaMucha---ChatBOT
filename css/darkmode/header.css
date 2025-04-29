@@ -1,27 +1,24 @@
 body {
     font-family: 'Poppins', sans-serif;
 }
-
-/* Barra Superior CSS */
-
 .barraSup .conteudoBarraSup {
     display: flex;
     align-items: center;
     justify-content: space-between;
     gap: 10px;
     padding: 15px;
-    background-color: #78281F;
+    background-color: #fcb4ac;
 }
 
 .barraSup .conteudoBarraSup .telefone {
-    color: #F5F5DC;
+    color: #0c0c04;
 }
 
 .barraSup .conteudoBarraSup .icons {
     display: flex;
     align-items: center; 
     gap: 10px;
-    color: #F5F5DC;
+    color: #0c0c04;
 }
 
 /* Barra Inferior CSS */
@@ -57,7 +54,7 @@ body {
     left: 0;
     width: 100%;
     height: 100%;
-    background-image: url("../img/fundo_Pizza.jpg");
+    background-image: url("../../img/fundo_Pizza.jpg");
     background-size: cover;
     background-position: center;
     filter: blur(5px); /* AQUI é filter, não backdrop-filter */
@@ -79,71 +76,18 @@ body {
 .barraInf .conteudoBarraInf .textoBarraInf{
     text-align: center;
     padding: 25px;
-    color: #F5F5DC;
+    color: #0c0c04;
 
 }
 
 .modal_funcionamento{
     background-color: transparent;
     border: none;
-    color: #F5F5DC;
+    color: #0c0c04;
 }
 
 .barraInf .logoPizzaria{
     width: 200px;
     height: 200px;
     border-radius: 100%;
-}
-
-/* Nav Bar Main CSS */
-
-main {
-    background-color: #F5F5DC;
-}
-
-.nav-tabs {
-    font-size: 20px;
-    padding: 20px;
-    position: sticky;
-    top: 0;
-    background-color: #F5F5DC; /* pra não ficar transparente */
-    z-index: 999;
-}
-
-.nav-link {
-    color: #78281F;
-}
-
-.nav-tabs .nav-link.active {
-    background-color: #78281F;
-    color: white;
-    border-color: #78281F #78281F transparent; /* opcional para melhorar a borda */
-}
-
-.tab-pane .titulo {
-    color: #78281F;
-    font-size: 45px;
-    padding: 20px;
-    font-family: 'Poppins', sans-serif;
-}
-
-.card {
-    border-radius: 15px;
-    overflow: hidden; 
-}
-
-.card .card-body{
-    background-color: #78281F;
-    color:#F5F5DC;
-}
-
-.devs{
-    display: flex;
-    align-items: center;
-    justify-content: center; /* CENTRALIZA */
-    gap: 10px;
-    padding: 15px;
-    background-color: #78281F;
-    color: #F5F5DC;
-    text-align: center; 
 }

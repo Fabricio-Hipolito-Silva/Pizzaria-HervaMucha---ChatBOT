@@ -1,0 +1,11 @@
+.devs{
+    display: flex;
+    align-items: center;
+    justify-content: center; /* CENTRALIZA */
+    gap: 10px;
+    padding: 15px;
+    background-color: #fcb4ac;
+    color: #0c0c04;
+    text-align: center; 
+}
+
