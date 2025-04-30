@@ -63,7 +63,6 @@ body {
 
 .barraInf .conteudoBarraInf {
     position: relative;
-    z-index: 1; /* fica na frente */
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -85,9 +84,99 @@ body {
     border: none;
     color: #0c0c04;
 }
+.modal_funcionamento:hover {
+    background-color: transparent;
+    border: none;
+    color: #F5F5DC;
+}
 
 .barraInf .logoPizzaria{
     width: 200px;
     height: 200px;
     border-radius: 100%;
 }
+
+/* Modal */
+
+.modal-horario{
+    color:#fcb4ac;
+}
+
+.modal.fade {
+    opacity: 0;
+    transition: opacity 0.3s ease-out;
+}
+  
+.modal.fade.show {
+    opacity: 1;
+}
+
+.modal.fade .modal-dialog {
+    transition: transform 0.3s ease-out, opacity 0.3s ease-out;
+    transform: translate(0, -25%);
+    opacity: 0;
+}
+.modal.fade.show .modal-dialog {
+    transform: translate(0, 0);
+    opacity: 1;
+}
+
+.modal-header {
+    border-bottom: none;
+    background-color: #fcb4ac;
+}
+
+.modal-header .close{
+    color: #0c0c04;
+    opacity: 1;
+}
+
+.modal-header .close,
+.modal-header .close:hover,
+.modal-header .close:focus,
+.modal-header .close span,
+.modal-header .close span:hover,
+.modal-header .close span:focus {
+    color: #0c0c04 !important;
+    opacity: 1 !important;
+    text-shadow: none !important;
+}
+
+.modal-body{
+    background-color: #0c0c04;
+}
+
+.titulo-modal{
+    font-size: 25px;
+}
+
+.table, 
+.table th, 
+.table td {
+    border: 1px solid #fcb4ac !important;
+}
+
+.thead{
+    background-color: #fcb4ac;
+    color: #0c0c04;
+}
+
+.indicativo{
+    margin: 3px;
+    padding: 6px;
+    color: #0c0c04;
+    background-color:#fcb4ac;
+    border-radius: 5%;
+}
+
+.modal-footer{
+    background-color: #0c0c04;
+    border: none;
+}
+
+.modal-footer .btn{
+    background-color: #fcb4ac !important;
+    color: #0c0c04 !important;
+    margin-top: 20px !important;
+}
+

@@ -1,0 +1,19 @@
+.barraInf .conteudoBarraInf {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    color: white;
+    padding-top: 60px;
+}
+
+o z-index foi retirado
+
+.modal_funcionamento:hover {
+    background-color: transparent;
+    border: none;
+    color: #F5F5DC;
+}
+isso ai foi adicionado

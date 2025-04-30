@@ -13,9 +13,10 @@
                 <link id="header-css" rel="stylesheet" href="css/lightmode/header.css">
                 <link id="main-css" rel="stylesheet" href="css/lightmode/main.css">
                 <link id="footer-css" rel="stylesheet" href="css/lightmode/footer.css">
-                <!-- <link rel="stylesheet" href="css/darkmode/header.css">
-                <link rel="stylesheet" href="css/darkmode/main.css">
-                <link rel="stylesheet" href="css/darkmode/footer.css"> -->
+                <!-- <link id="header-css" rel="stylesheet" href="css/darkmode/header.css">
+                <link id="main-css" rel="stylesheet" href="css/darkmode/main.css">
+                <link id="footer-css" rel="stylesheet" href="css/darkmode/footer.css"> -->
+            
             </head>
             <body>
                 <header>
@@ -46,9 +47,73 @@
                     </span>
 
                     <div class="horario">
-                        <i class="fa-solid fa-clock"></i> 60-90min  | <button class="modal_funcionamento">Ver Mais</button> <!-- Esse Button vai ser um Modal do Horário de Funcionamento -->
+                        <i class="fa-solid fa-clock"></i> 60-90min  | <button class="modal_funcionamento btn btn-primary" data-toggle="modal" data-target="#exampleModalCenter">Ver Mais</button> <!-- Esse Button vai ser um Modal do Horário de Funcionamento -->
                     </div>
                     </div>
+
+
+                    <!-- Modal -->
+                        <div class="modal fade modal-horario" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+                            <div class="modal-dialog modal-dialog-centered" role="document">    
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                </button>
+                                </div>
+                                <div class="modal-body">
+                                <h5 class="titulo-modal">Horário de Funcionamento</h5>
+                                <table class="table table-bordered">
+                                    <thead class="thead">
+                                      <tr>
+                                        <th scope="col">Dia</th>
+                                        <th scope="col">Horário</th>
+                                      </tr>
+                                    </thead>
+                                    <tbody>
+                                      <tr>
+                                        <td>DOM</td>
+                                        <td>18:00 às 23:30</td>
+                                      </tr>
+                                      <tr>
+                                        <td>TER</td>
+                                        <td>18:00 às 22:30</td>
+                                      </tr>
+                                      <tr>
+                                        <td>QUA</td>
+                                        <td>18:00 às 22:30</td>
+                                      </tr>
+                                      <tr>
+                                        <td>QUI</td>
+                                        <td>18:00 às 22:30</td>
+                                      </tr>
+                                      <tr>
+                                        <td>SEX</td>
+                                        <td>18:00 às 23:30</td>
+                                      </tr>
+                                      <tr>
+                                        <td>SÁB</td>
+                                        <td>18:00 às 23:30</td>
+                                      </tr>
+                                    </tbody>
+                                  </table>
+                                <h5 class="titulo-modal">Telefone</h5>
+                                <p>(13) 98838-6852</p>
+                                <h5 class="titulo-modal">Formas de Pagamento</h5>
+                                <span class="indicativo"> <i class="fa-solid fa-money-bill"></i> Dinheiro </span>
+                                <span class="indicativo"> <i class="fa-brands fa-cc-mastercard"></i> Mastercard</span>
+                                <span class="indicativo"> <i class="fa-brands fa-cc-visa"></i> Visa</span>
+                                <span class="indicativo"> <i class="fa-brands fa-pix"></i> Pix</span>
+                                </div>
+                                <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-dismiss="modal"> <i class="fa-solid fa-xmark"></i> Fechar </button>
+                                </div>
+                            </div>
+                            </div>
+                        </div>
+
+
+
                     </div>
                 </section>
                 </header>
